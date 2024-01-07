@@ -1,12 +1,35 @@
 import random
-import nltk
-nltk.download('wordnet')
-from nltk.corpus import wordnet
 
 class Pendu:
     def choisir_mot(self):
-        noms_communs = list(set(wordnet.words()))
-        return random.choice(noms_communs)
+        mots = [
+            "chat", "soleil", "arbre", "maison", "fleur",
+            "plage", "oiseau", "lune", "étoile", "route",
+            "fraise", "montagne", "rivière", "pont", "pomme",
+            "voiture", "école", "ballon", "livre", "nuage",
+            "jardin", "arc-en-ciel", "café", "cœur", "chocolat",
+            "cerise", "papillon", "nuage", "fenêtre", "porte",
+            "poisson", "ciel", "chapeau", "chien", "chaton",
+            "piano", "danse", "oiseau", "ballon", "forêt",
+            "gâteau", "rue", "église", "vélo", "train",
+            "avion", "bateau", "poème", "histoire", "musique",
+            "amour", "bonheur", "rêve", "sourire", "rire",
+            "pluie", "neige", "étoile filante", "hiver", "printemps",
+            "été", "automne", "famille", "ami", "voyage",
+            "sable", "pieds", "fenêtre", "porte", "ordinateur",
+            "internet", "écran", "clavier", "souris", "table",
+            "chaise", "lampe", "coussin", "couverture", "tapis",
+            "cadeau", "carte", "lettre", "merci", "santé",
+            "bonjour", "au revoir", "silence", "couleur", "joie",
+            "tristesse", "douceur", "câlin", "bisou", "nuit",
+            "jour", "moment", "instant", "tranquillité", "tendresse",
+            "jouet", "musée", "photo", "parc", "rue",
+            "manger", "boire", "dormir", "lire", "écrire",
+            "dessiner", "jouer", "courir", "marcher", "écouter",
+            "regarder", "sentir", "goûter", "aimer", "partager",
+            "rêver", "penser", "espérer", "vivre", "grandir"
+        ]
+        return random.choice(mots)
 
     def afficher_mot_masque(self, mot, lettres_trouvees):
         mot_masque = ""
@@ -20,7 +43,7 @@ class Pendu:
     def pendu(self):
         mot_secret = self.choisir_mot()
         lettres_trouvees = []
-        tentatives_restantes = 7
+        tentatives_restantes = 10
 
         print("Bienvenue au jeu du pendu!")
         print("Mot actuel :", self.afficher_mot_masque(mot_secret, lettres_trouvees))
