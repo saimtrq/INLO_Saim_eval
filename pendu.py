@@ -41,7 +41,7 @@ class Pendu:
         return mot_masque
 
     def pendu(self):
-        mot_secret = self.choisir_mot()
+        mot_secret = "tendresse" #self.choisir_mot()
         lettres_trouvees = []
         tentatives_restantes = 10
 
@@ -73,5 +73,5 @@ class Pendu:
             print("Désolé, vous avez épuisé toutes vos tentatives. Le mot était :", mot_secret)
 
 # Appel de la fonction pour démarrer le jeu
-jeu_pendu = Pendu()
-jeu_pendu.pendu()
+#jeu_pendu = Pendu()
+#jeu_pendu.pendu()
