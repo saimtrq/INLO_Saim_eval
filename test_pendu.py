@@ -25,5 +25,10 @@ class TestPendu(unittest.TestCase):
         lettre_trouvé = ['a', 'r', 'c']
         self.assertEqual(jeu_pendu.afficher_mot_masque('carrosserie', lettre_trouvé), 'carr____r__')
 
+    def test_retourne_carr____r__(self):
+        jeu_pendu = Pendu()
+        lettre_trouvé = ['a', 'r', 'c']
+        self.assertEqual(jeu_pendu.afficher_mot_masque('carrosserie', lettre_trouvé), 'carr____r__')
+
 if __name__ == '__main__':
     unittest.main()

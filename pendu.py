@@ -73,5 +73,5 @@ class Pendu:
             print("Désolé, vous avez épuisé toutes vos tentatives. Le mot était :", mot_secret)
 
 # Appel de la fonction pour démarrer le jeu
-#jeu_pendu = Pendu()
-#jeu_pendu.pendu()
+jeu_pendu = Pendu()
+jeu_pendu.pendu()
